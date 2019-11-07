@@ -12,6 +12,7 @@ class Student {
 	private String address;
 	private ImageIcon icon;
 	
+	/*getter, setter*/
 	public void setName(String value) {
 		this.name = value;
 	}

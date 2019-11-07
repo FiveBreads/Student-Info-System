@@ -7,9 +7,10 @@ public class MainFrame extends JFrame{
 	private String[] infoMenuItemTitle = {"학생 추가", "학생 조회", "정보 수정"};	
 	
 	private AddInfoPanel addPanel = new AddInfoPanel();
-	private SearchInfoPanel searchPanel = new SearchInfoPanel();
+	private ManagementPanel managementPanel = new ManagementPanel();
 	
 	public MainFrame() {
+		/*  JTabbedPane, JMenuBar   */
 		this.setTitle("학생 정보 시스템");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 		Container c = this.getContentPane();
@@ -21,9 +22,9 @@ public class MainFrame extends JFrame{
 	}
 	
 	private JTabbedPane createTabbedPane() {
-		JTabbedPane pane = new JTabbedPane();
+		JTabbedPane pane = new JTabbedPane();		
+		pane.addTab("학생 조회", managementPanel);
 		pane.addTab("학생 추가", addPanel);
-		pane.addTab("학생 조회", searchPanel);
 		return pane;
 	}
 	

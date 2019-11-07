@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.util.*;
-public class AddInfoPanel extends JPanel{
+class AddInfoPanel extends JPanel{
 	private HashMap<Integer, String> addPanelTitle = new HashMap<>();
 	private String[] labelTitle = {"이 름", "학 번", "학 과", "학 번", "생년월일", "휴 대 폰", "주 소", "사 진"};
 	
