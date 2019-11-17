@@ -12,7 +12,8 @@ public class MainFrame extends JFrame{
 	public MainFrame() {
 		/*  JTabbedPane, JMenuBar   */
 		this.setTitle("학생 정보 시스템");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
 		Container c = this.getContentPane();
 		JTabbedPane pane = this.createTabbedPane();
 		c.add(pane, BorderLayout.CENTER);

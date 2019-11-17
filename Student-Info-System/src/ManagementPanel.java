@@ -7,15 +7,10 @@ class ManagementPanel extends JPanel{
 	private StudentInfoPanel studentInfoPanel = new StudentInfoPanel();
 	
 	public ManagementPanel() {
-		this.setLayout(null);
+		this.setLayout(null);		
 		
-		searchInfoPanel.setBackground(Color.BLUE);
-		searchInfoPanel.setBounds(50, 30, 600, 150);
-		
-		listPanel.setBackground(Color.BLUE);
-		listPanel.setBounds(50, 230, 600, 450);
-		
-		studentInfoPanel.setBackground(Color.BLUE);
+		searchInfoPanel.setBounds(50, 30, 600, 150);		
+		listPanel.setBounds(50, 230, 600, 450);		
 		studentInfoPanel.setBounds(730, 30, 700, 650);
 		
 		this.add(searchInfoPanel);

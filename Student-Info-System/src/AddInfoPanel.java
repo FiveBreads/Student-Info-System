@@ -1,43 +1,24 @@
 import javax.swing.*;
 import java.util.*;
+
 class AddInfoPanel extends JPanel{
-	private HashMap<Integer, String> addPanelTitle = new HashMap<>();
-	private String[] labelTitle = {"이 름", "학 번", "학 과", "학 번", "생년월일", "휴 대 폰", "주 소", "사 진"};
+	private String[] labelTitle = {"이               름", "학               번", "학               과", "학               번"
+			, "생  년  월  일", "연      락     처", "주               소", "사               진"};
+	
+	private int textField_length = 7;
 	
 	private JLabel[] labels = new JLabel[8];
-	private JTextField[] textFields = new JTextField[8];
+	private JTextField[] textFields = new JTextField[textField_length];
+	private JButton imageInsertBtn = new JButton("불러 오기");
+	private JButton addStudentBtn = new JButton("추       가");
 	
 	public AddInfoPanel() {
 		this.setLayout(null);
 		this.makeJLabel();
-		this.makeMap();
 		this.makeTextField();
-		
-		int x = 40;
-		int y = 40;		
-		for(int i = 0; i < labels.length; i++) {
-			labels[i].setLocation(x, y);
-			this.add(labels[i]);
-			y += 30;
-		}
-		
-		x = 80;	
-		y = 40;
-		for(int i = 0; i < labels.length; i++) {
-			textFields[i].setLocation(x,  y);
-			this.add(textFields[i]);
-			y += 30;
-		}		
-	}
-	
-	private void setAddComponent() {
-		
-	}
-	
-	private void makeMap() {
-		for(int i = 0; i < labels.length; i++) {
-			addPanelTitle.put(i, labelTitle[i]);
-		}
+		this.setLabels();		
+		this.setTextFields();
+		this.setButton();
 	}
 	
 	private void makeJLabel() {
@@ -47,8 +28,35 @@ class AddInfoPanel extends JPanel{
 	}
 	
 	private void makeTextField() {
-		for(int i = 0; i < labels.length; i++) {
+		for(int i = 0; i < textField_length; i++) {
 			textFields[i] = new JTextField(20);
 		}
+	}
+	
+	private void setLabels() {
+		int x = 40;
+		int y = 40;		
+		for(int i = 0; i < labels.length; i++) {
+			labels[i].setBounds(x, y, 100, 30);
+			this.add(labels[i]);
+			y += 40;
+		}		
 	}	
+	
+	private void setTextFields() {
+		int x = 150;	
+		int y = 40;
+		for(int i = 0; i < textField_length; i++) {
+			textFields[i].setBounds(x,  y, 100, 30);
+			this.add(textFields[i]);
+			y += 40;
+		}
+	}	
+
+	private void setButton() {
+		imageInsertBtn.setBounds(150, 320, 100, 30);
+		addStudentBtn.setBounds(80, 400, 100, 30);
+		this.add(imageInsertBtn);
+		this.add(addStudentBtn);
+	}
 }
