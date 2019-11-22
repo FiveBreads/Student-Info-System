@@ -9,7 +9,7 @@ class SearchInfoPanel extends JPanel{
 	private JTextField search_textField = new JTextField(15);
 	private	JButton search_button = new JButton("검색");		
 	
-	public SearchInfoPanel() {		
+	public SearchInfoPanel() {	
 		this.setBorder(new TitledBorder(LineBorder.createGrayLineBorder(), "학생 검색"));
 		this.add(search_comboBox);
 		this.add(search_textField);

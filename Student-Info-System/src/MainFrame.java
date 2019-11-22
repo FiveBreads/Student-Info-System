@@ -2,12 +2,13 @@ import java.awt.*;
 import javax.swing.*;
 
 public class MainFrame extends JFrame{	
+	public static StudentInfoSave stuInfoSave = new StudentInfoSave();
+	public static AddInfoPanel addPanel = new AddInfoPanel();
+	public static ManagementPanel managementPanel = new ManagementPanel();
+	
 	private int infoItemNum = 3;
 	private int fileItemNum = 3;
-	private String[] infoMenuItemTitle = {"학생 추가", "학생 조회", "정보 수정"};	
-	
-	private AddInfoPanel addPanel = new AddInfoPanel();
-	private ManagementPanel managementPanel = new ManagementPanel();
+	private String[] infoMenuItemTitle = {"학생 추가", "학생 조회", "정보 수정"};		
 	
 	public MainFrame() {
 		/*  JTabbedPane, JMenuBar   */

@@ -12,6 +12,24 @@ class Student {
 	private String address;
 	private ImageIcon icon;
 	
+	public Student(String[] data) {
+		this.setName(data[0]);
+		this.setId(Integer.parseInt(data[1]));
+		this.setDepartment(data[2]);
+		this.setGrade(Integer.parseInt(data[3]));
+		this.setYear(Integer.parseInt(data[4].substring(0, 4)));
+		this.setMonth(Integer.parseInt(data[4].substring(4, 6)));
+		this.setDay(Integer.parseInt(data[4].substring(6, 8)));
+		this.setPhoneNumber(data[5]);
+		this.setAddress(data[6]);
+		this.checkData();
+	}
+	
+	private void checkData() {
+		System.out.println(this.getName());
+		System.out.println(this.getId());		
+	}
+	
 	/*getter, setter*/
 	public void setName(String value) {
 		this.name = value;
