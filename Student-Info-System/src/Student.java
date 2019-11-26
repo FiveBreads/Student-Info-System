@@ -27,7 +27,10 @@ class Student {
 	
 	private void checkData() {
 		System.out.println(this.getName());
-		System.out.println(this.getId());		
+		System.out.println(this.getId());
+		System.out.println(this.getYear());
+		System.out.println(this.getMonth());
+		System.out.println(this.getDay());
 	}
 	
 	/*getter, setter*/
