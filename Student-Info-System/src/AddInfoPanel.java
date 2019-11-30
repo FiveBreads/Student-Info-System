@@ -1,4 +1,8 @@
 import javax.swing.*;
+
+import java.awt.Color;
+import java.awt.Image;
+import java.io.File;
 import java.util.*;
 
 class AddInfoPanel extends JPanel{
@@ -7,7 +11,14 @@ class AddInfoPanel extends JPanel{
 	
 	private int textField_length = 7;
 	
+	private Image img;
+	//private ImageIcon icon;
+	
+	java.net.URL imgURL = ActionEventHandler.class.getResource("images/시간표.jpg");
+	ImageIcon icon = new ImageIcon(imgURL);
+	
 	private JLabel[] labels = new JLabel[8];
+	private JLabel imgLabel = new JLabel(icon);
 	private JTextField[] textFields = new JTextField[textField_length];
 	private JButton imageInsertBtn = new JButton("불러 오기");
 	private JButton addStudentBtn = new JButton("추       가");
@@ -16,12 +27,19 @@ class AddInfoPanel extends JPanel{
 		this.setLayout(null);
 		this.makeJLabel();
 		this.makeTextField();
-		this.setLabels();		
+		this.setLabels();	
+		this.setImageLabel();
 		this.setTextFields();
 		this.setButton();
 	}
 	
+	public void getImage(File image) {
+		
+	}
+	
 	public String[] getTextFields() {
+		/*학생 추가 창의 텍스트 필드 값이 입력되어 있는 값을 리턴하는 함수*/
+		
 		String[] data = new String[textField_length];
 		for(int i = 0; i < textField_length; i++) {
 			data[i] = this.textFields[i].getText().toString();
@@ -39,6 +57,11 @@ class AddInfoPanel extends JPanel{
 		for(int i = 0; i < textField_length; i++) {
 			textFields[i] = new JTextField(20);
 		}
+	}
+	
+	private void setImageLabel() {		
+		imgLabel.setBounds(40, 370, 160, 200);
+		this.add(imgLabel);
 	}
 	
 	private void setLabels() {
@@ -64,7 +87,7 @@ class AddInfoPanel extends JPanel{
 	private void setButton() {
 		imageInsertBtn.setBounds(150, 320, 100, 30);
 		imageInsertBtn.addActionListener(new ActionEventHandler());
-		addStudentBtn.setBounds(80, 400, 100, 30);
+		addStudentBtn.setBounds(80, 600, 100, 30);
 		addStudentBtn.addActionListener(new ActionEventHandler());
 		this.add(imageInsertBtn);
 		this.add(addStudentBtn);

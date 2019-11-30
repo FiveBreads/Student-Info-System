@@ -12,7 +12,11 @@ class StudentInfoSave {
 	}
 	
 	public void addStudent(Student student) {
-		studentInfo[++cursor] = student;		
+		if(cursor < studentInfo.length) {
+			studentInfo[++cursor] = student;
+		}else {
+			/*학생총원 초과 메시지 박스 띄울것*/
+		}
 	}
 	
 	public boolean isEmpty() {
