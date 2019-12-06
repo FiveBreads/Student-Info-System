@@ -2,24 +2,24 @@ import javax.swing.ImageIcon;
 
 class Student {
 	private String name;
-	private int id;
+	private String id;
 	private String department;
-	private	int grade;
-	private int year;
-	private int month;
-	private int day;
+	private	String grade;
+	private String year;
+	private String month;
+	private String day;
 	private String phoneNumber;
 	private String address;
 	private ImageIcon icon;
 	
 	public Student(String[] data) {
 		this.setName(data[0]);
-		this.setId(Integer.parseInt(data[1]));
+		this.setId(data[1]);
 		this.setDepartment(data[2]);
-		this.setGrade(Integer.parseInt(data[3]));
-		this.setYear(Integer.parseInt(data[4].substring(0, 4)));
-		this.setMonth(Integer.parseInt(data[4].substring(4, 6)));
-		this.setDay(Integer.parseInt(data[4].substring(6, 8)));
+		this.setGrade(data[3]);
+		this.setYear(data[4].substring(0, 4));
+		this.setMonth(data[4].substring(4, 6));
+		this.setDay(data[4].substring(6, 8));
 		this.setPhoneNumber(data[5]);
 		this.setAddress(data[6]);
 		//this.setImage();
@@ -38,22 +38,22 @@ class Student {
 	public void setName(String value) {
 		this.name = value;
 	}
-	public void setId(int value) {
+	public void setId(String value) {
 		this.id = value;
 	}
 	public void setDepartment(String value) {
 		this.department = value;
 	}
-	public void setGrade(int value) {
+	public void setGrade(String value) {
 		this.grade = value;
 	}
-	public void setYear(int value) {
+	public void setYear(String value) {
 		this.year = value;
 	}
-	public void setMonth(int value) {
+	public void setMonth(String value) {
 		this.month = value;
 	}
-	public void setDay(int value) {
+	public void setDay(String value) {
 		this.day = value;
 	}
 	public void setPhoneNumber(String value) {
@@ -70,22 +70,22 @@ class Student {
 	public String getName() {
 		return this.name;
 	}
-	public int getId() {
+	public String getId() {
 		return this.id;
 	}
 	public String getDepartment() {
 		return this.department;
 	}
-	public int getGrade() {
+	public String getGrade() {
 		return this.grade;
 	}
-	public int getYear() {
+	public String getYear() {
 		return this.year;
 	}
-	public int getMonth() {
+	public String getMonth() {
 		return this.month;
 	}
-	public int getDay() {
+	public String getDay() {
 		return this.day;
 	}
 	public String getPhoneNumber() {

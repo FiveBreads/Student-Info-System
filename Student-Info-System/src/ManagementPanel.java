@@ -2,9 +2,9 @@ import java.awt.Color;
 
 import javax.swing.*;
 class ManagementPanel extends JPanel{
-	private SearchInfoPanel searchInfoPanel = new SearchInfoPanel();	
-	private ListPanel listPanel = new ListPanel();
-	private StudentInfoPanel studentInfoPanel = new StudentInfoPanel();
+	public static SearchInfoPanel searchInfoPanel = new SearchInfoPanel();	
+	public static ListPanel listPanel = new ListPanel();
+	public static StudentInfoPanel studentInfoPanel = new StudentInfoPanel();
 	
 	public ManagementPanel() {
 		this.setLayout(null);		

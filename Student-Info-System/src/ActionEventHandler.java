@@ -7,7 +7,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 class ActionEventHandler implements ActionListener{
-	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton btn = (JButton)e.getSource();		
@@ -32,6 +31,26 @@ class ActionEventHandler implements ActionListener{
 			/*데이터 입력된 파일을 생성할 것*/
 			
 		}else if (btn.getText().equals("검색")) { 	
+			if(MainFrame.stuInfoSave.getSize() != 0) {
+				for(int i = 1; i <= MainFrame.stuInfoSave.getSize(); i++) {
+					if(SearchInfoPanel.choosedComboIndex == 0) {//학번
+						if(SearchInfoPanel.search_textField.getText().equals(MainFrame.stuInfoSave.getStudentInfo(i).getId())) {
+							ManagementPanel.listPanel.setList(MainFrame.stuInfoSave.getStudentInfo(i));
+						}
+						
+					}else if(SearchInfoPanel.choosedComboIndex == 1) {//이름
+						if(SearchInfoPanel.search_textField.getText().equals(MainFrame.stuInfoSave.getStudentInfo(i).getName())) {
+							ManagementPanel.listPanel.setList(MainFrame.stuInfoSave.getStudentInfo(i));
+						}
+						
+					}else if(SearchInfoPanel.choosedComboIndex == 2) {//학과
+						if(SearchInfoPanel.search_textField.getText().equals(MainFrame.stuInfoSave.getStudentInfo(i).getDepartment())) {
+							ManagementPanel.listPanel.setList(MainFrame.stuInfoSave.getStudentInfo(i));
+						}
+						
+					}
+				}				
+			}			
 			
 		}else if (btn.getText().equals("선택 학생 정보 삭제")) { 			
 		
