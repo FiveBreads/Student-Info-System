@@ -1,10 +1,14 @@
+import java.util.LinkedList;
 
 class StudentInfoSave {
 	private static Student[] studentInfo = new Student[101];
 	private static int cursor = 0;
-	
 	public int getSize() {
-		return this.cursor;
+		return cursor;
+	}
+	
+	public void removeStudent(int idx) {
+	
 	}
 	
 	public Student getStudentInfo(int idx) {
@@ -12,7 +16,7 @@ class StudentInfoSave {
 	}
 	
 	public void addStudent(Student student) {
-		if(cursor < studentInfo.length) {
+		if(cursor <= studentInfo.length) {
 			studentInfo[++cursor] = student;
 		}else {
 			/*학생총원 초과 메시지 박스 띄울것*/

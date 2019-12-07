@@ -46,7 +46,13 @@ class AddInfoPanel extends JPanel{
 		}
 		return data;
 	}
-			
+	
+	public void setTextFieldsClear() {
+		for(int i = 0; i < textField_length; i++) {
+			this.textFields[i].setText("");
+		}
+	}
+	
 	private void makeJLabel() {
 		for(int i = 0; i < labels.length; i++) {
 			labels[i] = new JLabel(labelTitle[i]);
