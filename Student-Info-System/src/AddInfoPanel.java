@@ -37,6 +37,10 @@ class AddInfoPanel extends JPanel{
 		
 	}
 	
+	public String[] getLabelTitle() {
+		return this.labelTitle;
+	}
+	
 	public String[] getTextFields() {
 		/*학생 추가 창의 텍스트 필드 값이 입력되어 있는 값을 리턴하는 함수*/
 		
