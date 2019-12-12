@@ -12,13 +12,12 @@ class AddInfoPanel extends JPanel{
 	private int textField_length = 7;
 	
 	private Image img;
-	//private ImageIcon icon;
+	private ImageIcon icon;
 	
-	java.net.URL imgURL = ActionEventHandler.class.getResource("images/시간표.jpg");
-	ImageIcon icon = new ImageIcon(imgURL);
-	
+	//java.net.URL imgURL = ActionEventHandler.class.getResource("images/시간표.jpg");
 	private JLabel[] labels = new JLabel[8];
-	private JLabel imgLabel = new JLabel(icon);
+	private JLabel imgLabel = new JLabel();
+	
 	private JTextField[] textFields = new JTextField[textField_length];
 	private JButton imageInsertBtn = new JButton("불러 오기");
 	private JButton addStudentBtn = new JButton("추       가");
@@ -33,8 +32,13 @@ class AddInfoPanel extends JPanel{
 		this.setButton();
 	}
 	
-	public void getImage(File image) {
-		
+	public void setImageIcon(String path) {
+		icon = new ImageIcon(path);
+		imgLabel.setIcon(icon);
+	}
+	
+	public ImageIcon getImageIcon() {
+		return this.icon;
 	}
 	
 	public String[] getLabelTitle() {
@@ -55,6 +59,7 @@ class AddInfoPanel extends JPanel{
 		for(int i = 0; i < textField_length; i++) {
 			this.textFields[i].setText("");
 		}
+		this.setImageIcon(null);
 	}
 	
 	private void makeJLabel() {

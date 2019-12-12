@@ -10,7 +10,7 @@ class ListPanel extends JPanel{
 	public static JList<Student> searchList = new JList<>();
 	
 	private JScrollPane scroll = new JScrollPane(searchList, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-	private JButton deleteButton = new JButton("선택 학생 정보 삭제");
+	private JButton deleteButton = new JButton("선택 학생 정보 수정");
 	private DefaultListModel<Student> studentModel;
 	private DefaultListModel listModel;
 	

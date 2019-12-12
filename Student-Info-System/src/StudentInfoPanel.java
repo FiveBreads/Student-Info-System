@@ -28,11 +28,13 @@ class StudentInfoPanel extends JPanel{
 		int y = 40;
 		for(int i = 0; i < infoLabel.length; i++) {
 			infoLabel[i].setBounds(x, y, 100, 50);
-			viewInfo[i].setBounds(x + 100, y, 200, 50);
+			viewInfo[i].setBounds(x + 100, y, 150, 50);
 			this.add(infoLabel[i]);
 			this.add(viewInfo[i]);
 			y += 70;
 		}
+		infoLabel[7].setBounds(x + 300, 40, 100, 50);
+		viewInfo[7].setBounds(x + 300, 100, 160, 220);
 	}
 	
 	public void getSelectedStudentInfo(Student st) {

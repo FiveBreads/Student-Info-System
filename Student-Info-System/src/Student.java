@@ -12,7 +12,7 @@ class Student {
 	private String address;
 	private ImageIcon icon;
 	
-	public Student(String[] data) {
+	public Student(String[] data, ImageIcon ic) {
 		this.setName(data[0]);
 		this.setId(data[1]);
 		this.setDepartment(data[2]);
@@ -22,7 +22,7 @@ class Student {
 		this.setDay(data[4].substring(6, 8));
 		this.setPhoneNumber(data[5]);
 		this.setAddress(data[6]);
-		//this.setImage();
+		this.setImage(ic);
 		//this.checkData();
 	}
 	
@@ -62,9 +62,9 @@ class Student {
 	public void setAddress(String value) {
 		this.address = value;
 	}
-	public void setImage(java.net.URL value) {
+	public void setImage(ImageIcon value) {
 		/*bin/images/ㅇㅇㅇ.jpg 파일의 경로를 가져다가 이미지아이콘으로*/
-		this.icon = new ImageIcon(value);
+		this.icon = value;
 	}
 	
 	public String getName() {
