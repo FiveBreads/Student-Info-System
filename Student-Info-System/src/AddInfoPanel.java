@@ -59,6 +59,7 @@ class AddInfoPanel extends JPanel{
 		for(int i = 0; i < textField_length; i++) {
 			this.textFields[i].setText("");
 		}
+		//생년월일은 19931102 의 형태로 삽입
 		this.setImageIcon(null);
 	}
 	
